@@ -87,7 +87,7 @@ header nav ul li a {
     background-image: url('../img/angel-2665661_1920.jpg');
     background-position: top;
     background-size: cover;
-    background-attachment: fixed;
+    /* background-attachment: fixed; Se elimina/comenta para evitar problemas en retina*/
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -370,6 +370,14 @@ li {
 
 
 /*Media Queries*/
+
+
+@media (min-width: 1440px){
+    .hero {
+        background-attachment: fixed; /* El efecto parallax solo funciona en dispositivos de más de 1440px*/
+    }
+}
+
 
 @media (max-width: 740px) {
     nav {
